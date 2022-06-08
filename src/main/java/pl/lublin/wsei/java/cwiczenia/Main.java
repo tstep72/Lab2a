@@ -9,12 +9,16 @@ import java.io.IOException;
 
 public class Main extends Application {
     @Override
-    public void start(Stage stage) throws IOException {
+    public void start(Stage primaryStage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("gusInfoGraphic.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 800, 700);
-        stage.setTitle("Infografiki GUS");
-        stage.setScene(scene);
-        stage.show();
+        Controller controller = fxmlLoader.getController();
+        controller.setHostServices(this.getHostServices());
+        controller.setStage(primaryStage);
+
+        primaryStage.setTitle("Infografiki GUS");
+        primaryStage.setScene(scene);
+        primaryStage.show();
     }
 
     public static void main(String[] args) {
