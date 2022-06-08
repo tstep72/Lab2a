@@ -40,4 +40,11 @@ public class Infografika {
         else wysokosc = "";
     }
 
+    public void print() {
+        System.out.println("Infografika:\ntytul: " + tytul
+                + "\nadres strony: " + adresStrony
+                + "\nadres grafiki: " + adresGrafiki
+                + "\nadres miniaturki: " + adresMiniaturki
+                + "\nrozmiary: " + szerokosc + "x" + wysokosc + "\n\n");
+    }
 }
