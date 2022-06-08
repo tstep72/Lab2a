@@ -4,6 +4,14 @@ import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
+//wzorce regularne:
+//  tytuł:      <title><!\\[CDATA\\[(.*)\\]\\]
+//  adresStrony     <link>(.*)<\\/link>
+//  adresGrafiki    <media:content url="(.*)" type
+//  adresMiniaturki     <media:thumbnail url="(.*)"
+//  szerokosc       type=\"(?:.*)\" width=\"(.*)\" height"
+//  wysokosc        type="(?:.*)" width="(?:.*)" height="(.*)"
+
 public class TestFileRead {
     public static void main(String[] args) {
         try {
